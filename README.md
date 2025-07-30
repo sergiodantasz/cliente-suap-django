@@ -3,7 +3,7 @@
 ![Django 5](https://img.shields.io/badge/Django-5-darkgreen)
 ![Python 3.13](https://img.shields.io/badge/Python-3.13-blue)
 
-**Última atualização:** <!--LAST_UPDATED-->29/07/2025
+**Última atualização:** <!--LAST_UPDATED-->30/07/2025
 
 ## Introdução
 
