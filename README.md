@@ -43,7 +43,7 @@ Lembre-se de anotar as chaves **Client ID** e **Client Secret** antes de salvar 
 
 Clone o repositório para a máquina, crie um ambiente virtual e instale as dependências (siga os passos de acordo com o seu sistema operacional):
 
-> Antes de executar o código, tenha certeza de que você tem o Python e as suas dependências instalados no sistema, bem como o Git.
+> Antes de executar o código, certifique-se de que você tem o Python e as suas dependências instalados no sistema, bem como o Git.
 
 <details>
 <summary><b>Linux</b></summary><br>
@@ -56,7 +56,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-</details><br>
+</details>
 
 <details>
 <summary><b>Windows</b></summary><br>
@@ -69,7 +69,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-</details><br>
+</details>
 
 Duplique o arquivo `.env.example`, renomeie a cópia para `.env` e configure corretamente as variáveis de ambiente no arquivo.
 
