@@ -3,6 +3,8 @@
 ![Django 5](https://img.shields.io/badge/Django-5-darkgreen)
 ![Python 3.13](https://img.shields.io/badge/Python-3.13-blue)
 
+**Última atualização:** <!--LAST_UPDATED-->
+
 ## Introdução
 
 Este repositório foi criado com o intuito de facilitar a integração da API do SUAP com o framework Django, tendo em vista a escassez de recursos na internet que auxiliem a sua utilização, seja por parte de alunos e servidores do IFRN, seja pelo público geral de programadores. Sabendo disso, esse repositório serve como base para que outras pessoas interessadas em consumir a API via Django o possam fazer sem maiores dificuldades.

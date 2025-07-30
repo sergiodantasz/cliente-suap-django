@@ -1,0 +1,29 @@
+name: Atualizar data no README
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Obter data do último commit
+        id: last_commit
+        run: echo "date=$(git log -1 --format=%cd --date=format:'%d/%m/%Y')" >> $GITHUB_OUTPUT
+
+      - name: Substituir marcador no README.md
+        run: |
+          sed -i "s|<!--LAST_UPDATED-->.*|<!--LAST_UPDATED-->${{ steps.last_commit.outputs.date }}|" README.md
+
+      - name: Commit e push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "Atualizar data de última atualização"
+          git push
