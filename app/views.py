@@ -8,30 +8,30 @@ from app.models import Usuario
 
 def login(request):
     if request.user.is_authenticated:
-        return redirect(reverse('app:profile'))
+        return redirect(reverse("app:profile"))
     return render(
         request,
-        'app/pages/login.html',
+        "app/pages/login.html",
         {
-            'title': 'Login'
-        }
+            "title": "Login",
+        },
     )
 
 
-@login_required(login_url='/login/')
+@login_required
 def profile(request):
     usuario = get_object_or_404(Usuario, matricula=request.user.username)
     return render(
-        request, 
-        'app/pages/profile.html',
+        request,
+        "app/pages/profile.html",
         {
-            'titulo': f'Perfil - {usuario.nome_completo}',
-            'usuario': usuario
-        }
+            "title": f"Perfil - {usuario.nome_completo}",
+            "usuario": usuario,
+        },
     )
 
 
-@login_required(login_url='/login/')
+@login_required
 def logout(request):
     auth_logout(request)
-    return redirect(reverse('app:login'))
+    return redirect(reverse("app:login"))
